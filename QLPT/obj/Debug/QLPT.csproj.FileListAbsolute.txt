@@ -25,3 +25,28 @@ D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT\obj\Debug\QLPT.Frmthongke.resources
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT\obj\Debug\QLPT.Frmthutien.resources
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT\obj\Debug\QLPT.Frmtraphong.resources
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT\obj\Debug\QLPT.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT.exe.config
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT.exe
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_BUS.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_DAL.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_Entity.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_BUS.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_DAL.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\QLPT_Entity.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\bin\Debug\Sqlhelper.1.0.0.0.Fakes.xml
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csprojAssemblyReference.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmdangnhap.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmkhachtro.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.FrmMain.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmphongtro.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmthongke.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmthutien.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmtraphong.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Properties.Resources.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.GenerateResource.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.CoreCompileInputs.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.exe
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.pdb

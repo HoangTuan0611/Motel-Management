@@ -38,5 +38,21 @@ namespace QLPT_BUS
         {
             return sql.LayThongtinmapt(DieuKien);
         }
+        public void updatetrangthaiphongtro1(string DieuKien)
+        {
+            sql.updatetrangthaiphongtro1(DieuKien);
+        }
+        public void updatetrangthaiphongtro2(string DieuKien)
+        {
+            sql.updatetrangthaiphongtro2(DieuKien);
+        }
+        public string demsoluongnguoi(string DieuKien)
+        {
+            return sql.demsoluongnguoi(DieuKien);
+        }
+        public string songuoitoida(string DieuKien)
+        {
+            return sql.songuoitoida(DieuKien);
+        }
     } 
 }

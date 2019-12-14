@@ -14,8 +14,12 @@ using QLPT_Entity;
 
 namespace QLPT
 {
+    
     public partial class Frmkhachtro : Form
     {
+        
+        string kiemtratinhtrangphong;
+        string text;
         public Frmkhachtro()
         {
             InitializeComponent();
@@ -23,6 +27,7 @@ namespace QLPT
         KetNoiDB db = new KetNoiDB();
         BUS_khachtro bus = new BUS_khachtro();
         E_khachtro ec = new E_khachtro();
+        
 
         void KhoaDieuKien()
         {
@@ -65,9 +70,24 @@ namespace QLPT
 
         private void Frmkhachtro_Load(object sender, EventArgs e)
         {
-            cbmapt.DataSource = bus.LayThongtinmapt("");
-            cbmapt.ValueMember = "mapt";
-            cbmapt.DisplayMember = "mapt";
+            
+            if (ckbphongtrong.Checked == true)
+            {
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Dang cho thue' and trangthai != 'Bao Tri'");
+                cbmapt.ValueMember = "mapt";
+                cbmapt.DisplayMember = "mapt";
+            }
+            else
+            {
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bao Tri'");
+                cbmapt.ValueMember = "mapt";
+                cbmapt.DisplayMember = "mapt";
+            }
+            if (cbmapt != null)
+            {
+                txtsltoida.Text = bus.songuoitoida("'" + cbmapt.Text + "'");
+                txtslhientai.Text = bus.demsoluongnguoi("'" + cbmapt.Text + "'");
+            }
             KhoaDieuKien();
             HienThi("");
         }
@@ -108,10 +128,16 @@ namespace QLPT
                         ec.cmnd = txtcmnd.Text;
                         ec.mapt = cbmapt.Text;
                         ec.gioitinh = GetGioiTinh();
-                        ec.makt = txtmakt.Text;                     
-                        bus.ThemDuLieu(ec);
-                        MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
-
+                        ec.makt = txtmakt.Text;
+                        int a = int.Parse(txtslhientai.Text);
+                        int b = int.Parse(txtsltoida.Text);
+                        if (a<b) {
+                            bus.ThemDuLieu(ec);
+                            bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
+                            MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
+                        }
+                        else { MessageBox.Show("Phòng đã đạt số lượng tối đa"); }
+                                              
                     }
                     catch
                     {
@@ -151,9 +177,22 @@ namespace QLPT
                         ec.mapt = cbmapt.Text;
                         ec.gioitinh = GetGioiTinh();
                         ec.makt = txtmakt.Text;
-                        bus.SuaDuLieu(ec);
-                        MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
-
+                        int a = int.Parse(txtslhientai.Text);
+                        int b = int.Parse(txtsltoida.Text);
+                        if (a < b)
+                        {
+                            bus.SuaDuLieu(ec);
+                            if (cbmapt.Text != kiemtratinhtrangphong)
+                            {
+                                text = bus.demsoluongnguoi("'" + cbmapt.Text + "'");
+                                if (text == "0") bus.updatetrangthaiphongtro2("'" + cbmapt.Text + "'");
+                                else bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
+                                text = bus.demsoluongnguoi("'" + kiemtratinhtrangphong + "'");
+                                if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
+                                else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
+                            }
+                            MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
+                        }                                                                        
                     }
                     catch
                     {
@@ -173,6 +212,9 @@ namespace QLPT
             {
                 ec.makt = txtmakt.Text;
                 bus.XoaDuLieu(ec);
+                text = bus.demsoluongnguoi("'" + kiemtratinhtrangphong + "'");
+                if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
+                else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
                 MessageBox.Show("Xóa thành công");
                 KhoaDieuKien();
                 HienThi("");
@@ -221,6 +263,7 @@ namespace QLPT
                 int dong = e.RowIndex;
                 txtmakt.Text = dgvkhachhang.Rows[dong].Cells[0].Value.ToString();
                 cbmapt.Text = dgvkhachhang.Rows[dong].Cells[1].Value.ToString();
+                kiemtratinhtrangphong = cbmapt.Text;
                 txthoten.Text = dgvkhachhang.Rows[dong].Cells[2].Value.ToString();      
                 txtcmnd.Text = dgvkhachhang.Rows[dong].Cells[3].Value.ToString();              
                 txtnghenghiep.Text = dgvkhachhang.Rows[dong].Cells[5].Value.ToString();
@@ -245,6 +288,28 @@ namespace QLPT
             txthoten.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txthoten.Text);
             //cho con nháy đi về sau mỗi kí tự được nhập
             txthoten.SelectionStart = txthoten.Text.Length;
+        }
+
+        private void Cbmapt_TextChanged(object sender, EventArgs e)
+        {
+            txtsltoida.Text = bus.songuoitoida("'" + cbmapt.Text + "'");
+            txtslhientai.Text = bus.demsoluongnguoi("'" + cbmapt.Text + "'");
+        }
+
+        private void Ckbphongtrong_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbphongtrong.Checked == true)
+            {
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Dang cho thue' and trangthai != 'Bao Tri'");
+                cbmapt.ValueMember = "mapt";
+                cbmapt.DisplayMember = "mapt";
+            }
+            else
+            {
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bao Tri'");
+                cbmapt.ValueMember = "mapt";
+                cbmapt.DisplayMember = "mapt";
+            }
         }
     }
 

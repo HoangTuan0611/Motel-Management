@@ -16,6 +16,7 @@ namespace QLPT
 {
     public partial class Frmphongtro : Form
     {
+        string kiemtratrangthai;
         public Frmphongtro()
         {
             InitializeComponent();
@@ -28,10 +29,10 @@ namespace QLPT
         void KhoaDieuKien()
         {
             txtmapt.Enabled = false;
-            txtnguoihientai.Enabled = false;
-            txtnguoitoida.Enabled = false;
+           
+            
             txttenphong.Enabled = false;
-            txttrangthai.Enabled = false;
+            cmbtrangthai.Enabled = false;
             cbloaiphong.Enabled = false;
             cbtang.Enabled = false;
            
@@ -40,21 +41,20 @@ namespace QLPT
         void MoDieuKien()
         {
             txtmapt.Enabled = false;
-            txtnguoihientai.Enabled = true;
-            txtnguoitoida.Enabled = true;
-            txttenphong.Enabled = true;
-            txttrangthai.Enabled = true;
+            
+            
+            txttenphong.Enabled = true;         
             cbloaiphong.Enabled = true;
             cbtang.Enabled = true;
+            cmbtrangthai.Enabled = true;
         }
 
         void setnull()
         {
             txtmapt.Text = "";
-            txtnguoihientai.Text = "";
-            txtnguoitoida.Text = "";
+            
+    
             txttenphong.Text = "";
-            txttrangthai.Text = "";
             cbtang.Text = "";
             cbloaiphong.Text = "";
         }
@@ -84,9 +84,10 @@ namespace QLPT
         private void btnthem_Click(object sender, EventArgs e)
         {
             if (btnthem.Text == "Thêm")
-            {
-
+            {               
                 MoDieuKien();
+                cmbtrangthai.Text = "Trong";
+                cmbtrangthai.Enabled = false;
                 setnull();
                 txtmapt.Focus();
                 btnthem.Text = "Lưu";
@@ -106,9 +107,12 @@ namespace QLPT
                         ec.mapt = txtmapt.Text;
                         ec.loai = cbloaiphong.Text;
                         ec.tang = cbtang.Text;
-                        ec.sltoida = txtnguoitoida.Text;
-                        ec.songuoihientai = txtnguoihientai.Text;
-                        ec.trangthai = txttrangthai.Text;
+                        if (cbloaiphong.Text == "A")
+                        {
+                            ec.sltoida = "2";
+                        }
+                        else { ec.sltoida = "3"; }
+                        ec.trangthai = cmbtrangthai.Text;
                         ec.tenphong = txttenphong.Text;
                         bus.ThemDuLieu(ec);
                         MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
@@ -131,6 +135,11 @@ namespace QLPT
             if (btnsua.Text == "Sửa")
             {
                 MoDieuKien();
+                if (kiemtratrangthai != "Dang cho thue")
+                {
+                    cmbtrangthai.Enabled = true;
+                }
+                else cmbtrangthai.Enabled = false;
                 txtmapt.Focus();
                 btnsua.Text = "Lưu";
             }
@@ -148,9 +157,12 @@ namespace QLPT
                         ec.mapt = txtmapt.Text;
                         ec.loai = cbloaiphong.Text;
                         ec.tang = cbtang.Text;
-                        ec.sltoida = txtnguoitoida.Text;
-                        ec.songuoihientai = txtnguoihientai.Text;
-                        ec.trangthai = txttrangthai.Text;
+                        if (cbloaiphong.Text == "A")
+                        {
+                            ec.sltoida = "2";
+                        }
+                        else { ec.sltoida = "3"; }
+                        ec.trangthai = cmbtrangthai.Text;
                         ec.tenphong = txttenphong.Text;
                         bus.SuaDuLieu(ec);
                         MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
@@ -185,9 +197,10 @@ namespace QLPT
         }
         private void MaTuTang()
         {
+
             DataTable dt = db.GetDataTable("Select * from phongtro");
             string h = "";
-
+            if (dt == null) { h = "PT00001"; goto here; }
             if (dt.Rows.Count <= 0)
             {
                 h = "PT00001";
@@ -211,6 +224,7 @@ namespace QLPT
                 h = h + k.ToString();
 
             }
+            here:
             txtmapt.Text = h;
         }
 
@@ -219,11 +233,10 @@ namespace QLPT
             try
             {
                 int dong = e.RowIndex;
-                txtmapt.Text = dgvphongtro.Rows[dong].Cells[0].Value.ToString();
-                txtnguoihientai.Text = dgvphongtro.Rows[dong].Cells[6].Value.ToString();
-                txtnguoitoida.Text = dgvphongtro.Rows[dong].Cells[4].Value.ToString();
+                txtmapt.Text = dgvphongtro.Rows[dong].Cells[0].Value.ToString();                               
                 txttenphong.Text = dgvphongtro.Rows[dong].Cells[2].Value.ToString();
-                txttrangthai.Text = dgvphongtro.Rows[dong].Cells[5].Value.ToString();
+                cmbtrangthai.Text = dgvphongtro.Rows[dong].Cells[5].Value.ToString();
+                kiemtratrangthai = cmbtrangthai.Text;
                 cbloaiphong.Text = dgvphongtro.Rows[dong].Cells[3].Value.ToString();
                 cbtang.Text = dgvphongtro.Rows[dong].Cells[1].Value.ToString();
 
@@ -240,5 +253,7 @@ namespace QLPT
             //cho con nháy đi về sau mỗi kí tự được nhập
             txttenphong.SelectionStart = txttenphong.Text.Length;
         }
+
+        
     }
 }

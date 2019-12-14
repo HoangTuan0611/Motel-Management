@@ -38,6 +38,21 @@ namespace QLPT_DAL
         {
             return cn.GetDataTable("Select mapt from phongtro " + DieuKien);
         }
-
+        public void updatetrangthaiphongtro1(string DieuKien)
+        {
+            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Dang cho thue' where mapt = " + DieuKien);
+        }
+        public void updatetrangthaiphongtro2(string DieuKien)
+        {
+            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trong' where mapt = " + DieuKien);
+        }
+        public string demsoluongnguoi(string DieuKien)
+        {
+           return cn.GetValue("Select COUNT(*) from khachtro where mapt = " + DieuKien);
+        }
+        public string songuoitoida(string DieuKien)
+        {
+           return cn.GetValue("Select sltoida from phongtro where mapt = " + DieuKien);
+        }
     }
 }

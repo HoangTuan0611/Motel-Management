@@ -12,6 +12,7 @@ namespace QLPT_DAL
     {
         KetNoiDB cn = new KetNoiDB();
 
+        
         // Thêm Dữ Liệu
         public void ThemDuLieu(E_phongtro et)
         {

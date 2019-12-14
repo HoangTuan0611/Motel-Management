@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace QLPT_DAL
 {
     public class KetNoiDB
@@ -57,6 +58,7 @@ namespace QLPT_DAL
                 DataTable dt = new DataTable();
                 SqlDataAdapter sqlda = new SqlDataAdapter(strSQL, connect);
                 sqlda.Fill(dt);
+               
                 DongKetNoi();
                 return dt;
 
@@ -66,6 +68,7 @@ namespace QLPT_DAL
                 return null;
             }
         }
+       
         public static string _ChuoiKetNoi = (@"Server=.; Database=DataQLPT ;Integrated Security=SSPI");
         public static DataTable GetDanhSach(string strSQL)
         {

@@ -7,3 +7,12 @@ D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.dll
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.pdb
 D:\DH UIT\Học kì 5\OOAD\Project\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\bin\Debug\QLPT_DAL.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\bin\Debug\QLPT_Entity.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csprojAssemblyReference.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CoreCompileInputs.cache
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.csproj.CopyComplete
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.dll
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_DAL\obj\Debug\QLPT_DAL.pdb
