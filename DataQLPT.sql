@@ -95,6 +95,6 @@ SELECT *
 	where @username = USERNAME
 			and @password = PASS
 
-			Select phongtro.mapt from phongtro where trangthai != 'Da cho thue'
+Select phongtro.mapt from phongtro where trangthai != 'Da cho thue'
 
-			Select phongtro.mapt from phongtro,khachtro where phongtro.trangthai != 'Da cho thue' OR khachtro.mapt=phongtro.mapt
+Select phongtro.mapt from phongtro,khachtro where phongtro.trangthai != 'Da cho thue' OR khachtro.mapt=phongtro.mapt
