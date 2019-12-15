@@ -96,6 +96,7 @@ namespace QLPT
 
         private string GetGioiTinh()//Lấy giới tính của sinh viên
         {
+
             if (rdnam.Checked)
                 return "Nam";
             else 
@@ -281,7 +282,7 @@ namespace QLPT
                 {
                     rdnam.Checked = true;
                 }
-                if (dgvkhachhang[4, dgvkhachhang.CurrentRow.Index].Value.ToString() == "Nữ")
+                else
                 {
                     rdnu.Checked = true;
                 }
