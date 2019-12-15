@@ -181,24 +181,27 @@ namespace QLPT
                         ec.makt = txtmakt.Text;
                         int a = int.Parse(txtslhientai.Text);
                         int b = int.Parse(txtsltoida.Text);                     
-                        if (a < b)
+                        
+                        if (cbmapt.Text != kiemtratinhtrangphong)
                         {
-                            bus.SuaDuLieu(ec);
-                            if (cbmapt.Text != kiemtratinhtrangphong)
+                            if (a < b)
                             {
+                                bus.SuaDuLieu(ec);
                                 text = bus.demsoluongnguoi("'" + cbmapt.Text + "'");
                                 if (text == "0") bus.updatetrangthaiphongtro2("'" + cbmapt.Text + "'");
                                 else bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
                                 text = bus.demsoluongnguoi("'" + kiemtratinhtrangphong + "'");
                                 if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
                                 else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
+                                MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
                             }
-                            else
-                            {
-                                bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
-                            }
+                        }
+                        else
+                        {
+                            bus.SuaDuLieu(ec);
+                            bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
                             MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
-                        }                                                                        
+                        }                                                                                                                         
                     }
                     catch
                     {
