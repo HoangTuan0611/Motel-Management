@@ -91,18 +91,23 @@ namespace QLPT
                     txttienphong.Text = tienphongnho.ToString();
                 }             
                 else { txttienphong.Text = tienphonglon.ToString(); }
-                if (txtsokidien.Text != "" && txtsoxe.Text != "")
+                try
                 {
-                    txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
-                                   + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
-                                   + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                    if (txtsokidien.Text != "" && txtsoxe.Text != "")
+                    {
+                        txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
+                                       + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
+                                       + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                    }
                 }
+                catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định","Thông báo"); }
             }
         }
 
         private void Txtsokidien_TextChanged(object sender, EventArgs e)
         {
-            if (Kiemtra != 0)
+
+            try
             {
                 txttiendien.Text = (tiendien * (int.Parse(txtsokidien.Text))).ToString();
                 if (txtsoxe.Text != "")
@@ -112,21 +117,22 @@ namespace QLPT
                                        + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
                 }
             }
-            else
-            {
-                MessageBox.Show("Chưa có tham số");
-            }
+            catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định", "Thông báo"); }
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            txttienxe.Text = (tienxe * (int.Parse(txtsoxe.Text))).ToString();
-            if (txtsokidien.Text != "")
+            try
             {
-                txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
-                               + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
-                               + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                txttienxe.Text = (tienxe * (int.Parse(txtsoxe.Text))).ToString();
+                if (txtsokidien.Text != "")
+                {
+                    txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
+                                   + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
+                                   + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                }
             }
+            catch { MessageBox.Show("Vui lòng kiểm tra lại tham số ở form qui định", "Thông báo"); }
         }
 
         private void Btntinhtien_Click(object sender, EventArgs e)
@@ -165,17 +171,17 @@ namespace QLPT
                         if (Kiemtra != 0)
                         {
                             bus.ThemDuLieu(ec);
-                            MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
+                            MessageBox.Show("Tính tiền thành công nếu kết quả sai vui lòng kiểm tra tham số form qui định!", "Thông báo");
                             return;
                         }
                         else
                         {
-                            MessageBox.Show("Bạn chưa nhập tham số");
+                            MessageBox.Show("Vui lòng điền đầy đủ tham số trong form qui định");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Thêm thất bại", "Thông Báo");
+                        MessageBox.Show("Tính tiền thất bại", "Thông Báo");
                         return;
                     }
                 }
