@@ -85,5 +85,29 @@ namespace QLPT
             Frmphongtro pt = new Frmphongtro();
             pt.ShowDialog();
         }
+
+        private void TrảPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmtraphong tp = new Frmtraphong();
+            tp.ShowDialog();
+        }
+
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            Frmquidinh qd = new Frmquidinh();
+            qd.ShowDialog();
+        }
+
+        private void ThuTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmthutien tt = new Frmthutien();
+            tt.ShowDialog();
+        }
+
+        private void Tbtnthongke_Click(object sender, EventArgs e)
+        {
+            Frmthongke tk = new Frmthongke();
+            tk.ShowDialog();
+        }
     }
 }

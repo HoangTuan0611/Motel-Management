@@ -43,6 +43,10 @@
   <ItemGroup>
     <Compile Include="DAL_khachtro.cs" />
     <Compile Include="DAL_phongtro.cs" />
+    <Compile Include="DAL_quidinh.cs" />
+    <Compile Include="DAL_thongke.cs" />
+    <Compile Include="DAL_thutien.cs" />
+    <Compile Include="DAL_traphong.cs" />
     <Compile Include="KetNoiDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

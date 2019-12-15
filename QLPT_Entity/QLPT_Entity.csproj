@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="E_khachtro.cs" />
     <Compile Include="E_phongtro.cs" />
+    <Compile Include="E_quidinh.cs" />
+    <Compile Include="E_thutien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

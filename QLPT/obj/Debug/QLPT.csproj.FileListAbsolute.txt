@@ -50,3 +50,5 @@ C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.CoreCompileI
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.CopyComplete
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.exe
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.pdb
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.Frmquidinh.resources
+C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT\obj\Debug\QLPT.csproj.ResolveComReference.cache

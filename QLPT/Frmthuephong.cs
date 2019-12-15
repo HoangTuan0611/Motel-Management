@@ -191,6 +191,10 @@ namespace QLPT
                                 if (text == "0") bus.updatetrangthaiphongtro2("'" + kiemtratinhtrangphong + "'");
                                 else bus.updatetrangthaiphongtro1("'" + kiemtratinhtrangphong + "'");
                             }
+                            else
+                            {
+                                bus.updatetrangthaiphongtro1("'" + cbmapt.Text + "'");
+                            }
                             MessageBox.Show("Sửa dữ liệu thành công!", "Thông báo");
                         }                                                                        
                     }

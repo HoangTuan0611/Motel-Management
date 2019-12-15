@@ -43,6 +43,10 @@
   <ItemGroup>
     <Compile Include="BUS_khachtro.cs" />
     <Compile Include="BUS_phongtro.cs" />
+    <Compile Include="BUS_quidinh.cs" />
+    <Compile Include="BUS_thongke.cs" />
+    <Compile Include="BUS_thutien.cs" />
+    <Compile Include="BUS_traphong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
