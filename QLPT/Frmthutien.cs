@@ -48,7 +48,7 @@ namespace QLPT
                     tienrac = int.Parse(bus.getvalue2("tienrac", "'1'"));
                     giamtien = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
                 }
-                cbphong.DataSource = bus.LayThongtinmapt(" where trangthai != 'Trong' and trangthai != 'Bao Tri'");
+                cbphong.DataSource = bus.LayThongtinmapt(" where trangthai = 'Đang cho thuê' ");
                 cbphong.ValueMember = "mapt";
                 cbphong.DisplayMember = "mapt";
                 if (cbphong != null)
@@ -168,15 +168,16 @@ namespace QLPT
                     ec.ngaythu = dtngaythu.Value;
                     if (txtsokidien.Text != "" && txtsoxe.Text != "")
                     {
-                        if (Kiemtra != 0)
+                        if (tienphonglon != 0 && tienphongnho!=0&&tiendien!=0&&tiennuoc!=0&&tienmang!=0&&tienrac!=0&&tienxe!=0&&giamtien!=0)
                         {
+                          
                             bus.ThemDuLieu(ec);
-                            MessageBox.Show("Tính tiền thành công nếu kết quả sai vui lòng kiểm tra tham số form qui định!", "Thông báo");
+                            MessageBox.Show("Tính tiền thành công", "Thông báo");
                             return;
                         }
                         else
                         {
-                            MessageBox.Show("Vui lòng điền đầy đủ tham số trong form qui định");
+                            MessageBox.Show("Vui lòng điền đầy đủ tham số trong Form qui định");
                         }
                     }
                     else

@@ -75,7 +75,7 @@ namespace QLPT
             
             if (ckbphongtrong.Checked == true)
             {
-                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Đang cho thuê' and trangthai != 'Bảo trì'");
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai = 'Trống'");
                 cbmapt.ValueMember = "mapt";
                 cbmapt.DisplayMember = "mapt";
             }

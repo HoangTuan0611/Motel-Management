@@ -131,7 +131,7 @@
             // txtphongnho
             // 
             this.txtphongnho.Location = new System.Drawing.Point(219, 14);
-            this.txtphongnho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtphongnho.Margin = new System.Windows.Forms.Padding(4);
             this.txtphongnho.Name = "txtphongnho";
             this.txtphongnho.Size = new System.Drawing.Size(132, 22);
             this.txtphongnho.TabIndex = 8;
@@ -139,7 +139,7 @@
             // txtphonglon
             // 
             this.txtphonglon.Location = new System.Drawing.Point(219, 41);
-            this.txtphonglon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtphonglon.Margin = new System.Windows.Forms.Padding(4);
             this.txtphonglon.Name = "txtphonglon";
             this.txtphonglon.Size = new System.Drawing.Size(132, 22);
             this.txtphonglon.TabIndex = 9;
@@ -147,7 +147,7 @@
             // txttiendien
             // 
             this.txttiendien.Location = new System.Drawing.Point(219, 68);
-            this.txttiendien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttiendien.Margin = new System.Windows.Forms.Padding(4);
             this.txttiendien.Name = "txttiendien";
             this.txttiendien.Size = new System.Drawing.Size(132, 22);
             this.txttiendien.TabIndex = 10;
@@ -155,7 +155,7 @@
             // txttiennuoc
             // 
             this.txttiennuoc.Location = new System.Drawing.Point(219, 95);
-            this.txttiennuoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttiennuoc.Margin = new System.Windows.Forms.Padding(4);
             this.txttiennuoc.Name = "txttiennuoc";
             this.txttiennuoc.Size = new System.Drawing.Size(132, 22);
             this.txttiennuoc.TabIndex = 11;
@@ -163,7 +163,7 @@
             // txttienxe
             // 
             this.txttienxe.Location = new System.Drawing.Point(219, 123);
-            this.txttienxe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttienxe.Margin = new System.Windows.Forms.Padding(4);
             this.txttienxe.Name = "txttienxe";
             this.txttienxe.Size = new System.Drawing.Size(132, 22);
             this.txttienxe.TabIndex = 12;
@@ -171,7 +171,7 @@
             // txttienmang
             // 
             this.txttienmang.Location = new System.Drawing.Point(219, 150);
-            this.txttienmang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttienmang.Margin = new System.Windows.Forms.Padding(4);
             this.txttienmang.Name = "txttienmang";
             this.txttienmang.Size = new System.Drawing.Size(132, 22);
             this.txttienmang.TabIndex = 13;
@@ -179,7 +179,7 @@
             // txtgiamtien
             // 
             this.txtgiamtien.Location = new System.Drawing.Point(219, 204);
-            this.txtgiamtien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtgiamtien.Margin = new System.Windows.Forms.Padding(4);
             this.txtgiamtien.Name = "txtgiamtien";
             this.txtgiamtien.Size = new System.Drawing.Size(132, 22);
             this.txtgiamtien.TabIndex = 14;
@@ -187,7 +187,7 @@
             // txttienrac
             // 
             this.txttienrac.Location = new System.Drawing.Point(219, 176);
-            this.txttienrac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttienrac.Margin = new System.Windows.Forms.Padding(4);
             this.txttienrac.Name = "txttienrac";
             this.txttienrac.Size = new System.Drawing.Size(132, 22);
             this.txttienrac.TabIndex = 15;
@@ -195,7 +195,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(385, 202);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 16;
@@ -227,10 +227,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frmquidinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frmquidinh";
+            this.Text = "Quy định";
             this.Load += new System.EventHandler(this.Frmquidinh_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

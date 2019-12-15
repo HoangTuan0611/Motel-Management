@@ -20,7 +20,7 @@ namespace QLPT_DAL
         }
         public void updatetrangthaiphongtro2(string DieuKien)
         {
-            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trong' where mapt = " + DieuKien);
+            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trống' where mapt = " + DieuKien);
         }
         public string getvalue(string DieuKien1,string DieuKien2)
         {

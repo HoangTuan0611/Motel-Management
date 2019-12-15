@@ -21,7 +21,7 @@ namespace QLPT
 
         private void Frmtraphong_Load(object sender, EventArgs e)
         {
-            cbphong.DataSource = bus.LayThongtinmapt(" where trangthai != 'Trong' and trangthai != 'Bao Tri'");
+            cbphong.DataSource = bus.LayThongtinmapt(" where trangthai ='Đang cho thuê'");
             cbphong.ValueMember = "mapt";
             cbphong.DisplayMember = "mapt";
             if (cbphong != null)
@@ -45,7 +45,7 @@ namespace QLPT
         {
             bus.Xoa("'"+txtmaphong.Text+"'");
             bus.updatetrangthaiphongtro2("'" + txtmaphong.Text + "'");
-            cbphong.DataSource = bus.LayThongtinmapt(" where trangthai != 'Trong' and trangthai != 'Bao Tri'");
+            cbphong.DataSource = bus.LayThongtinmapt(" where trangthai ='Đang cho thuê'");
             cbphong.ValueMember = "mapt";
             cbphong.DisplayMember = "mapt";
             if (cbphong != null)
