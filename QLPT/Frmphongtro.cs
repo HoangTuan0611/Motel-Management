@@ -86,7 +86,7 @@ namespace QLPT
             if (btnthem.Text == "Thêm")
             {               
                 MoDieuKien();
-                cmbtrangthai.Text = "Trong";
+                cmbtrangthai.Text = "Trống";
                 cmbtrangthai.Enabled = false;
                 setnull();
                 txtmapt.Focus();
@@ -135,7 +135,7 @@ namespace QLPT
             if (btnsua.Text == "Sửa")
             {
                 MoDieuKien();
-                if (kiemtratrangthai != "Dang cho thue")
+                if (kiemtratrangthai != "Đang cho thuê")
                 {
                     cmbtrangthai.Enabled = true;
                 }

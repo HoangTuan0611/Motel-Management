@@ -51,6 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnhuy = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nghenghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnhuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,7 +102,7 @@
             // 
             this.ckbphongtrong.AutoSize = true;
             this.ckbphongtrong.Location = new System.Drawing.Point(275, 69);
-            this.ckbphongtrong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbphongtrong.Margin = new System.Windows.Forms.Padding(4);
             this.ckbphongtrong.Name = "ckbphongtrong";
             this.ckbphongtrong.Size = new System.Drawing.Size(113, 21);
             this.ckbphongtrong.TabIndex = 19;
@@ -134,7 +134,7 @@
             // 
             this.txtslhientai.Enabled = false;
             this.txtslhientai.Location = new System.Drawing.Point(879, 103);
-            this.txtslhientai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtslhientai.Margin = new System.Windows.Forms.Padding(4);
             this.txtslhientai.Name = "txtslhientai";
             this.txtslhientai.Size = new System.Drawing.Size(132, 22);
             this.txtslhientai.TabIndex = 16;
@@ -143,7 +143,7 @@
             // 
             this.txtsltoida.Enabled = false;
             this.txtsltoida.Location = new System.Drawing.Point(520, 103);
-            this.txtsltoida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsltoida.Margin = new System.Windows.Forms.Padding(4);
             this.txtsltoida.Name = "txtsltoida";
             this.txtsltoida.Size = new System.Drawing.Size(132, 22);
             this.txtsltoida.TabIndex = 15;
@@ -189,6 +189,7 @@
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(215, 22);
             this.txtsdt.TabIndex = 11;
+            this.txtsdt.Leave += new System.EventHandler(this.txtsdt_Leave);
             // 
             // txtnghenghiep
             // 
@@ -197,6 +198,7 @@
             this.txtnghenghiep.Name = "txtnghenghiep";
             this.txtnghenghiep.Size = new System.Drawing.Size(215, 22);
             this.txtnghenghiep.TabIndex = 10;
+            this.txtnghenghiep.TextChanged += new System.EventHandler(this.txtnghenghiep_TextChanged);
             // 
             // txtcmnd
             // 
@@ -297,6 +299,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1249, 46);
             this.panel2.TabIndex = 8;
+            // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(862, 15);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(75, 23);
+            this.btnhuy.TabIndex = 4;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // btnthem
             // 
@@ -410,16 +422,6 @@
             this.sdt.DataPropertyName = "sdt";
             this.sdt.HeaderText = "SĐT";
             this.sdt.Name = "sdt";
-            // 
-            // btnhuy
-            // 
-            this.btnhuy.Location = new System.Drawing.Point(862, 15);
-            this.btnhuy.Name = "btnhuy";
-            this.btnhuy.Size = new System.Drawing.Size(75, 23);
-            this.btnhuy.TabIndex = 4;
-            this.btnhuy.Text = "Hủy";
-            this.btnhuy.UseVisualStyleBackColor = true;
-            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // Frmkhachtro
             // 

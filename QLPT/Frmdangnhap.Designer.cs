@@ -79,6 +79,7 @@
             this.btndn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btndn.UseVisualStyleBackColor = true;
             this.btndn.Click += new System.EventHandler(this.btndn_Click);
+            this.btndn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btndn_KeyDown);
             // 
             // txtmk
             // 
@@ -89,6 +90,7 @@
             this.txtmk.Size = new System.Drawing.Size(293, 22);
             this.txtmk.TabIndex = 26;
             this.txtmk.UseWaitCursor = true;
+            this.txtmk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmk_KeyDown);
             // 
             // txttnd
             // 

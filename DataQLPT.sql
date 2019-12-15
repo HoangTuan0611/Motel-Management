@@ -30,7 +30,7 @@ hoten nvarchar(50),
 cmnd varchar(15),
 gioitinh nvarchar(10),
 nghenghiep nvarchar(50),
-sdt varchar(15)
+sdt int
 )
 go
 alter table khachtro add constraint Fk_khachtro FOREIGN KEY(mapt) REFERENCES phongtro(mapt)

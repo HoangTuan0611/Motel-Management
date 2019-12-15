@@ -32,14 +32,6 @@ namespace QLPT
 
         }
 
-        private void txttnd_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                btndn_Click(sender, e);
-            }
-        }
-
         private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -56,12 +48,12 @@ namespace QLPT
 
             {
                 FrmMain.TaiKhoan = txttnd.Text;
-                MessageBox.Show("Bạn đã đăng nhập thành công");
+                MessageBox.Show("Chào mừng bạn đến chương trình Quản lý nhà trọ");
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu?", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Sorry! Bạn sai tài khoản hoặc mật khẩu mất rồi", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.txttnd.Focus();
 
             }
@@ -80,5 +72,14 @@ namespace QLPT
 
             }
         }
+
+        private void btndn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btndn_Click(sender, e);
+            }
+        }
+
     }
 }

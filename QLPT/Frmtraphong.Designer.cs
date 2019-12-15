@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgthongtinkhachthue = new System.Windows.Forms.DataGridView();
+            this.btnxacnhan = new System.Windows.Forms.Button();
             this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,6 @@
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nghenghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnxacnhan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgthongtinkhachthue)).BeginInit();
@@ -82,7 +82,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 126);
+            this.groupBox1.Size = new System.Drawing.Size(790, 126);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng thuê";
@@ -128,7 +128,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1067, 185);
+            this.groupBox3.Size = new System.Drawing.Size(905, 185);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin khách thuê";
@@ -149,50 +149,8 @@
             this.dgthongtinkhachthue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgthongtinkhachthue.Name = "dgthongtinkhachthue";
             this.dgthongtinkhachthue.RowTemplate.Height = 24;
-            this.dgthongtinkhachthue.Size = new System.Drawing.Size(1061, 166);
+            this.dgthongtinkhachthue.Size = new System.Drawing.Size(899, 166);
             this.dgthongtinkhachthue.TabIndex = 0;
-            // 
-            // makt
-            // 
-            this.makt.DataPropertyName = "makt";
-            this.makt.HeaderText = "Mã khách trọ";
-            this.makt.Name = "makt";
-            // 
-            // mapt
-            // 
-            this.mapt.DataPropertyName = "mapt";
-            this.mapt.HeaderText = "Mã phòng trọ";
-            this.mapt.Name = "mapt";
-            // 
-            // hoten
-            // 
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Họ tên";
-            this.hoten.Name = "hoten";
-            // 
-            // cmnd
-            // 
-            this.cmnd.DataPropertyName = "cmnd";
-            this.cmnd.HeaderText = "CMND";
-            this.cmnd.Name = "cmnd";
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "Giới tính";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // nghenghiep
-            // 
-            this.nghenghiep.DataPropertyName = "nghenghiep";
-            this.nghenghiep.HeaderText = "Nghề nghiệp";
-            this.nghenghiep.Name = "nghenghiep";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "Sdt";
-            this.sdt.Name = "sdt";
             // 
             // btnxacnhan
             // 
@@ -205,12 +163,61 @@
             this.btnxacnhan.UseVisualStyleBackColor = true;
             this.btnxacnhan.Click += new System.EventHandler(this.Btnxacnhan_Click);
             // 
+            // makt
+            // 
+            this.makt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.makt.DataPropertyName = "makt";
+            this.makt.HeaderText = "Mã khách trọ";
+            this.makt.Name = "makt";
+            // 
+            // mapt
+            // 
+            this.mapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mapt.DataPropertyName = "mapt";
+            this.mapt.HeaderText = "Mã phòng trọ";
+            this.mapt.Name = "mapt";
+            // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "Họ tên";
+            this.hoten.Name = "hoten";
+            // 
+            // cmnd
+            // 
+            this.cmnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnd.DataPropertyName = "cmnd";
+            this.cmnd.HeaderText = "CMND";
+            this.cmnd.Name = "cmnd";
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "Giới tính";
+            this.gioitinh.Name = "gioitinh";
+            // 
+            // nghenghiep
+            // 
+            this.nghenghiep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nghenghiep.DataPropertyName = "nghenghiep";
+            this.nghenghiep.HeaderText = "Nghề nghiệp";
+            this.nghenghiep.Name = "nghenghiep";
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            // 
             // Frmtraphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1007, 561);
+            this.ClientSize = new System.Drawing.Size(932, 559);
             this.Controls.Add(this.btnxacnhan);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

@@ -41,11 +41,11 @@ namespace QLPT_DAL
         }
         public void updatetrangthaiphongtro1(string DieuKien)
         {
-            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Dang cho thue' where mapt = " + DieuKien);
+            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Đang cho thuê' where mapt = " + DieuKien);
         }
         public void updatetrangthaiphongtro2(string DieuKien)
         {
-            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trong' where mapt = " + DieuKien);
+            cn.ThucThiCauLenh("UPDATE phongtro SET trangthai ='Trống' where mapt = " + DieuKien);
         }
         public string demsoluongnguoi(string DieuKien)
         {

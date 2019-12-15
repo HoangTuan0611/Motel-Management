@@ -39,6 +39,7 @@ namespace QLPT
             cbmapt.Enabled = false;
             rdnu.Enabled = false;
             rdnam.Enabled = false;
+            ckbphongtrong.Enabled = false;
         }
 
         void MoDieuKien()
@@ -51,6 +52,7 @@ namespace QLPT
             cbmapt.Enabled = true;
             rdnu.Enabled = true;
             rdnam.Enabled = true;
+            ckbphongtrong.Enabled = true;
         }
 
         void setnull()
@@ -73,13 +75,13 @@ namespace QLPT
             
             if (ckbphongtrong.Checked == true)
             {
-                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Dang cho thue' and trangthai != 'Bao Tri'");
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Đang cho thuê' and trangthai != 'Bảo trì'");
                 cbmapt.ValueMember = "mapt";
                 cbmapt.DisplayMember = "mapt";
             }
             else
             {
-                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bao Tri'");
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bảo trì'");
                 cbmapt.ValueMember = "mapt";
                 cbmapt.DisplayMember = "mapt";
             }
@@ -178,7 +180,7 @@ namespace QLPT
                         ec.gioitinh = GetGioiTinh();
                         ec.makt = txtmakt.Text;
                         int a = int.Parse(txtslhientai.Text);
-                        int b = int.Parse(txtsltoida.Text);
+                        int b = int.Parse(txtsltoida.Text);                     
                         if (a < b)
                         {
                             bus.SuaDuLieu(ec);
@@ -304,13 +306,13 @@ namespace QLPT
         {
             if (ckbphongtrong.Checked == true)
             {
-                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Dang cho thue' and trangthai != 'Bao Tri'");
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Đang cho thuê' and trangthai != 'Bảo trì'");
                 cbmapt.ValueMember = "mapt";
                 cbmapt.DisplayMember = "mapt";
             }
             else
             {
-                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bao Tri'");
+                cbmapt.DataSource = bus.LayThongtinmapt(" where trangthai != 'Bảo trì'");
                 cbmapt.ValueMember = "mapt";
                 cbmapt.DisplayMember = "mapt";
             }
@@ -321,6 +323,39 @@ namespace QLPT
             setnull();
             txtmakt.Focus();
             btnthem.Text = "Thêm";
+            KhoaDieuKien();
+        }
+
+        private void txtsdt_Leave(object sender, EventArgs e)
+        {
+            if (PhoneNumberCheck(txtsdt.Text) == false)
+            {
+                MessageBox.Show("Vui lòng nhập lại số điện thoại(số điện thoại phải có 10 số và bắt đầu bằng số 0)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtsdt.Focus();
+            }
+        }
+        private bool PhoneNumberCheck(string sdt) //Kiểm số điện thoại 
+        {
+            if (sdt.Length == 10)
+            {
+                if (sdt[0] != '0')
+                    return false;
+                for (int i = 0; i < sdt.Length; i++)
+                {
+                    if (!char.IsDigit(sdt[i]))
+                        return false;
+                }
+            }
+            else
+                return false;
+            return true;
+        }
+
+        private void txtnghenghiep_TextChanged(object sender, EventArgs e)
+        {
+            txtnghenghiep.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txtnghenghiep.Text);
+            //cho con nháy đi về sau mỗi kí tự được nhập
+            txtnghenghiep.SelectionStart = txtnghenghiep.Text.Length;
         }
     }
 
