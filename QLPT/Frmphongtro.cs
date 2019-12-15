@@ -254,6 +254,11 @@ namespace QLPT
             txttenphong.SelectionStart = txttenphong.Text.Length;
         }
 
-        
+        private void btnhuy_Click(object sender, EventArgs e)
+        {
+            setnull();
+            txtmapt.Focus();
+            btnthem.Text = "Thêm";
+        }
     }
 }

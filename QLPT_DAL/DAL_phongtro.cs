@@ -16,12 +16,12 @@ namespace QLPT_DAL
         // Thêm Dữ Liệu
         public void ThemDuLieu(E_phongtro et)
         {
-            cn.ThucThiCauLenh(@"INSERT INTO phongtro (mapt, tang, tenphong, loai, sltoida, trangthai, songuoihientai) VALUES  ('" + et.mapt + "',N'" + et.tang + "',N'" + et.tenphong + "',N'" + et.loai + "',N'" + et.sltoida + "',N'" + et.trangthai + "',N'" + et.songuoihientai + "')");
+            cn.ThucThiCauLenh(@"INSERT INTO phongtro (mapt, tang, tenphong, loai, sltoida, trangthai) VALUES  ('" + et.mapt + "',N'" + et.tang + "',N'" + et.tenphong + "',N'" + et.loai + "',N'" + et.sltoida + "',N'" + et.trangthai + "')");
         }
         //Sửa
         public void SuaDuLieu(E_phongtro et)
         {
-            cn.ThucThiCauLenh(@"UPDATE phongtro SET tang = N'" + et.tang + "', tenphong =N'" + et.tenphong + "', loai ='" + et.loai + "', sltoida ='" + et.sltoida + "', trangthai ='" + et.trangthai + "', songuoihientai ='" + et.songuoihientai + "' Where mapt='" + et.mapt + "'");
+            cn.ThucThiCauLenh(@"UPDATE phongtro SET tang = N'" + et.tang + "', tenphong =N'" + et.tenphong + "', loai ='" + et.loai + "', sltoida ='" + et.sltoida + "', trangthai ='" + et.trangthai + "' Where mapt='" + et.mapt + "'");
         }
         //Xoá
         public void XoaDuLieu(E_phongtro et)

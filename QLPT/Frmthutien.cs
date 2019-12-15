@@ -36,37 +36,39 @@ namespace QLPT
         private void Frmthutien_Load(object sender, EventArgs e)
         {
             Kiemtra = int.Parse(bus.kiemtra());
-            if(Kiemtra!=0)
-            {
-                tienphongnho = int.Parse(bus.getvalue2("tienphongnho", "'1'"));
-                tienphonglon = int.Parse(bus.getvalue2("tienphonglon", "'1'"));
-                tiendien = int.Parse(bus.getvalue2("tiendien", "'1'"));
-                tiennuoc = int.Parse(bus.getvalue2("tiennuoc", "'1'"));
-                tienxe = int.Parse(bus.getvalue2("tienxe", "'1'"));
-                tienmang = int.Parse(bus.getvalue2("tienmang", "'1'"));
-                tienrac = int.Parse(bus.getvalue2("tienrac", "'1'"));
-                giamtien = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
-            }
-            cbphong.DataSource = bus.LayThongtinmapt(" where trangthai != 'Trong' and trangthai != 'Bao Tri'");
-            cbphong.ValueMember = "mapt";
-            cbphong.DisplayMember = "mapt";
-            if (cbphong != null)
-            {
-                soluongnguoi = int.Parse(bus.demsoluongnguoi("'" + cbphong.Text + "'"));
-                txttenphong.Text = bus.getvalue("tenphong", "'" + cbphong.Text + "'");
-                txtmaphong.Text = bus.getvalue("mapt", "'" + cbphong.Text + "'");
-                txtTang.Text = bus.getvalue("tang", "'" + cbphong.Text + "'");
-                txtloaiphong.Text = bus.getvalue("loai", "'" + cbphong.Text + "'");
-                dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtmaphong.Text + "'");
-                txttiennuoc.Text = (soluongnguoi * tiennuoc).ToString();
-                txttienmang.Text = tienmang.ToString();
-                if(txtloaiphong.Text=="A")
+            
+                if (Kiemtra != 0)
                 {
-                    txttienphong.Text = tienphongnho.ToString();
+                    tienphongnho = int.Parse(bus.getvalue2("tienphongnho", "'1'"));
+                    tienphonglon = int.Parse(bus.getvalue2("tienphonglon", "'1'"));
+                    tiendien = int.Parse(bus.getvalue2("tiendien", "'1'"));
+                    tiennuoc = int.Parse(bus.getvalue2("tiennuoc", "'1'"));
+                    tienxe = int.Parse(bus.getvalue2("tienxe", "'1'"));
+                    tienmang = int.Parse(bus.getvalue2("tienmang", "'1'"));
+                    tienrac = int.Parse(bus.getvalue2("tienrac", "'1'"));
+                    giamtien = int.Parse(bus.getvalue2("giamtienlenphong", "'1'"));
                 }
-                else { txttienphong.Text = tienphonglon.ToString(); }
-                
-            }
+                cbphong.DataSource = bus.LayThongtinmapt(" where trangthai != 'Trong' and trangthai != 'Bao Tri'");
+                cbphong.ValueMember = "mapt";
+                cbphong.DisplayMember = "mapt";
+                if (cbphong != null)
+                {
+                    soluongnguoi = int.Parse(bus.demsoluongnguoi("'" + cbphong.Text + "'"));
+                    txttenphong.Text = bus.getvalue("tenphong", "'" + cbphong.Text + "'");
+                    txtmaphong.Text = bus.getvalue("mapt", "'" + cbphong.Text + "'");
+                    txtTang.Text = bus.getvalue("tang", "'" + cbphong.Text + "'");
+                    txtloaiphong.Text = bus.getvalue("loai", "'" + cbphong.Text + "'");
+                    dgthongtinkhachthue.DataSource = bus.TaoBang("where mapt='" + txtmaphong.Text + "'");
+                    txttiennuoc.Text = (soluongnguoi * tiennuoc).ToString();
+                    txttienmang.Text = tienmang.ToString();
+                    if (txtloaiphong.Text == "A")
+                    {
+                        txttienphong.Text = tienphongnho.ToString();
+                    }
+                    else { txttienphong.Text = tienphonglon.ToString(); }
+
+                }
+            
             string time = dtngaythu.Text;
             year = time.Substring(6, 4);
             month = time.Substring(3, 2);
@@ -100,12 +102,19 @@ namespace QLPT
 
         private void Txtsokidien_TextChanged(object sender, EventArgs e)
         {
-            txttiendien.Text = (tiendien * (int.Parse(txtsokidien.Text))).ToString();
-            if (txtsoxe.Text != "")
+            if (Kiemtra != 0)
             {
-                txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
-                                   + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
-                                   + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                txttiendien.Text = (tiendien * (int.Parse(txtsokidien.Text))).ToString();
+                if (txtsoxe.Text != "")
+                {
+                    txttongtien.Text = (tienrac + int.Parse(txttienphong.Text) + int.Parse(txttiendien.Text)
+                                       + int.Parse(txttiennuoc.Text) + int.Parse(txttienmang.Text)
+                                       + int.Parse(txttienxe.Text) - ((int.Parse(txtTang.Text) - 1) * giamtien)).ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa có tham số");
             }
         }
 
@@ -153,9 +162,16 @@ namespace QLPT
                     ec.ngaythu = dtngaythu.Value;
                     if (txtsokidien.Text != "" && txtsoxe.Text != "")
                     {
-                        bus.ThemDuLieu(ec);
-                        MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
-                        return;
+                        if (Kiemtra != 0)
+                        {
+                            bus.ThemDuLieu(ec);
+                            MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo");
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bạn chưa nhập tham số");
+                        }
                     }
                     else
                     {

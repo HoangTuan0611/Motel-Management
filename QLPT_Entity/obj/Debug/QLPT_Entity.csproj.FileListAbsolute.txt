@@ -10,3 +10,9 @@ C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.cspro
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.csproj.CoreCompileInputs.cache
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.dll
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.pdb
+D:\Githud\QLPT\QLPT_Entity\bin\Debug\QLPT_Entity.dll
+D:\Githud\QLPT\QLPT_Entity\bin\Debug\QLPT_Entity.pdb
+D:\Githud\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.csprojAssemblyReference.cache
+D:\Githud\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.csproj.CoreCompileInputs.cache
+D:\Githud\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.dll
+D:\Githud\QLPT\QLPT_Entity\obj\Debug\QLPT_Entity.pdb

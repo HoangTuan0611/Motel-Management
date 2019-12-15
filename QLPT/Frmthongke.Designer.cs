@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmthongke));
             this.label1 = new System.Windows.Forms.Label();
             this.dvthutien = new System.Windows.Forms.DataGridView();
             this.mathu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +49,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(144, 22);
+            this.label1.Location = new System.Drawing.Point(183, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tháng:";
             // 
@@ -67,9 +69,10 @@
             this.tienxe,
             this.tienphong,
             this.tongtien});
-            this.dvthutien.Location = new System.Drawing.Point(1, 70);
+            this.dvthutien.Location = new System.Drawing.Point(1, 86);
+            this.dvthutien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvthutien.Name = "dvthutien";
-            this.dvthutien.Size = new System.Drawing.Size(645, 284);
+            this.dvthutien.Size = new System.Drawing.Size(860, 350);
             this.dvthutien.TabIndex = 1;
             // 
             // mathu
@@ -130,17 +133,19 @@
             // 
             this.dtngaythu.CustomFormat = "MM/yyyy";
             this.dtngaythu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtngaythu.Location = new System.Drawing.Point(201, 17);
+            this.dtngaythu.Location = new System.Drawing.Point(255, 22);
+            this.dtngaythu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtngaythu.Name = "dtngaythu";
-            this.dtngaythu.Size = new System.Drawing.Size(70, 20);
+            this.dtngaythu.Size = new System.Drawing.Size(97, 22);
             this.dtngaythu.TabIndex = 2;
             this.dtngaythu.ValueChanged += new System.EventHandler(this.Dtngaythu_ValueChanged);
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(297, 17);
+            this.btnxem.Location = new System.Drawing.Point(396, 21);
+            this.btnxem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(75, 23);
+            this.btnxem.Size = new System.Drawing.Size(100, 28);
             this.btnxem.TabIndex = 3;
             this.btnxem.Text = "Xem";
             this.btnxem.UseVisualStyleBackColor = true;
@@ -148,9 +153,10 @@
             // 
             // btnexcel
             // 
-            this.btnexcel.Location = new System.Drawing.Point(403, 17);
+            this.btnexcel.Location = new System.Drawing.Point(537, 21);
+            this.btnexcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnexcel.Name = "btnexcel";
-            this.btnexcel.Size = new System.Drawing.Size(75, 23);
+            this.btnexcel.Size = new System.Drawing.Size(100, 28);
             this.btnexcel.TabIndex = 4;
             this.btnexcel.Text = "Excel";
             this.btnexcel.UseVisualStyleBackColor = true;
@@ -158,16 +164,19 @@
             // 
             // Frmthongke
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 366);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(865, 450);
             this.Controls.Add(this.btnexcel);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.dtngaythu);
             this.Controls.Add(this.dvthutien);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frmthongke";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";
             this.Load += new System.EventHandler(this.Frmthongke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvthutien)).EndInit();

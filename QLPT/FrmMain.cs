@@ -25,6 +25,7 @@ namespace QLPT
         }
         void KhoaDieuKien()
         {
+            tbtnquydinh.Enabled = false;
             tbtndangnhap.Enabled = true;
             tbtnphongtro.Enabled = false;
             tbtnthongke.Enabled = false;
@@ -32,6 +33,7 @@ namespace QLPT
         }
         void MoDieuKien()
         {
+            tbtnquydinh.Enabled = true;
             tbtndangnhap.Enabled = true;
             tbtnphongtro.Enabled = true;
             tbtnthongke.Enabled = true;

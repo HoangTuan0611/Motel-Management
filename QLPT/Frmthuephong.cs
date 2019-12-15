@@ -315,6 +315,13 @@ namespace QLPT
                 cbmapt.DisplayMember = "mapt";
             }
         }
+
+        private void btnhuy_Click(object sender, EventArgs e)
+        {
+            setnull();
+            txtmakt.Focus();
+            btnthem.Text = "Thêm";
+        }
     }
 
 

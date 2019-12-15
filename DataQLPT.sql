@@ -13,6 +13,7 @@ loai nvarchar(10) primary key,
 soluong int,
 )
 go
+drop table phongtro
 create table phongtro(
 mapt varchar (50) primary key,
 tang int references tangphong ,
@@ -20,7 +21,6 @@ tenphong int,
 loai nvarchar(10) references loaiphong,
 sltoida int,
 trangthai nvarchar(50),
-songuoihientai int
 )
 go
 create table khachtro(
@@ -45,6 +45,13 @@ tienxe int,
 tienphong int,
 ngaythu smalldatetime,
 tongtien int,
+)
+
+create table thuephong(
+mathuephong int primary key,
+makt varchar(50) REFERENCES khachtro,
+mapt varchar(50) REFERENCES phongtro,
+ngaythue smalldatetime,
 )
 
 go

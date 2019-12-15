@@ -20,3 +20,14 @@ C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.Core
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
 C:\Users\kirichigo\Documents\GitHub\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_BUS.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.dll
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_DAL.pdb
+D:\Githud\QLPT\QLPT_BUS\bin\Debug\QLPT_Entity.pdb
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csprojAssemblyReference.cache
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CoreCompileInputs.cache
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.csproj.CopyComplete
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.dll
+D:\Githud\QLPT\QLPT_BUS\obj\Debug\QLPT_BUS.pdb

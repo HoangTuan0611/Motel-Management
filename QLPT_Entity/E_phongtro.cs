@@ -15,7 +15,7 @@ namespace QLPT_Entity
         private string _loai;
         private string _sltoida;
         private string _trangthai;
-        private string _songuoihientai;
+       
 
 
 
@@ -94,18 +94,7 @@ namespace QLPT_Entity
                 _trangthai = value;
             }
         }
-        public string songuoihientai
-        {
-            get
-            {
-                return _songuoihientai;
-            }
-
-            set
-            {
-                _songuoihientai = value;
-            }
-        }
+     
 
     }
 }

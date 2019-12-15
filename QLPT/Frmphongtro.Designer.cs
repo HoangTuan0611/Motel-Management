@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmphongtro));
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbtrangthai = new System.Windows.Forms.ComboBox();
             this.cbloaiphong = new System.Windows.Forms.ComboBox();
@@ -52,6 +53,7 @@
             this.loaiphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sltoida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnhuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,10 +73,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(9, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(12, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(887, 145);
+            this.panel1.Size = new System.Drawing.Size(1183, 178);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -84,113 +86,110 @@
             this.cmbtrangthai.Items.AddRange(new object[] {
             "Trong",
             "Bao Tri"});
-            this.cmbtrangthai.Location = new System.Drawing.Point(623, 29);
+            this.cmbtrangthai.Location = new System.Drawing.Point(831, 36);
+            this.cmbtrangthai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbtrangthai.Name = "cmbtrangthai";
-            this.cmbtrangthai.Size = new System.Drawing.Size(82, 21);
+            this.cmbtrangthai.Size = new System.Drawing.Size(203, 24);
             this.cmbtrangthai.TabIndex = 14;
             // 
             // cbloaiphong
             // 
             this.cbloaiphong.FormattingEnabled = true;
-            this.cbloaiphong.Location = new System.Drawing.Point(440, 31);
-            this.cbloaiphong.Margin = new System.Windows.Forms.Padding(2);
+            this.cbloaiphong.Location = new System.Drawing.Point(544, 39);
+            this.cbloaiphong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbloaiphong.Name = "cbloaiphong";
-            this.cbloaiphong.Size = new System.Drawing.Size(76, 21);
+            this.cbloaiphong.Size = new System.Drawing.Size(118, 24);
             this.cbloaiphong.TabIndex = 13;
             // 
             // cbtang
             // 
             this.cbtang.FormattingEnabled = true;
-            this.cbtang.Location = new System.Drawing.Point(440, 67);
-            this.cbtang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbtang.Location = new System.Drawing.Point(544, 86);
+            this.cbtang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbtang.Name = "cbtang";
-            this.cbtang.Size = new System.Drawing.Size(92, 21);
+            this.cbtang.Size = new System.Drawing.Size(121, 24);
             this.cbtang.TabIndex = 12;
             // 
             // txttenphong
             // 
-            this.txttenphong.Location = new System.Drawing.Point(132, 63);
-            this.txttenphong.Margin = new System.Windows.Forms.Padding(2);
+            this.txttenphong.Location = new System.Drawing.Point(176, 78);
+            this.txttenphong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttenphong.Name = "txttenphong";
-            this.txttenphong.Size = new System.Drawing.Size(115, 20);
+            this.txttenphong.Size = new System.Drawing.Size(152, 22);
             this.txttenphong.TabIndex = 8;
             this.txttenphong.TextChanged += new System.EventHandler(this.txttenphong_TextChanged);
             // 
             // txtmapt
             // 
-            this.txtmapt.Location = new System.Drawing.Point(132, 25);
-            this.txtmapt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmapt.Location = new System.Drawing.Point(176, 31);
+            this.txtmapt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmapt.Name = "txtmapt";
-            this.txtmapt.Size = new System.Drawing.Size(115, 20);
+            this.txtmapt.Size = new System.Drawing.Size(152, 22);
             this.txtmapt.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(563, 32);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(751, 39);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Trạng thái";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 32);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(423, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Loại phòng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(423, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tầng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Phòng trọ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(45, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Phòng trọ";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnhuy);
             this.panel2.Controls.Add(this.btnthem);
             this.panel2.Controls.Add(this.btnxoa);
             this.panel2.Controls.Add(this.btnsua);
-            this.panel2.Location = new System.Drawing.Point(9, 152);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(12, 187);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(887, 49);
+            this.panel2.Size = new System.Drawing.Size(1183, 60);
             this.panel2.TabIndex = 1;
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(320, 15);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnthem.Location = new System.Drawing.Point(427, 18);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(56, 19);
+            this.btnthem.Size = new System.Drawing.Size(75, 23);
             this.btnthem.TabIndex = 2;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
@@ -198,10 +197,10 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(562, 15);
-            this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnxoa.Location = new System.Drawing.Point(749, 18);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(56, 19);
+            this.btnxoa.Size = new System.Drawing.Size(75, 23);
             this.btnxoa.TabIndex = 1;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
@@ -209,10 +208,10 @@
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(440, 15);
-            this.btnsua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnsua.Location = new System.Drawing.Point(587, 18);
+            this.btnsua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(56, 19);
+            this.btnsua.Size = new System.Drawing.Size(75, 23);
             this.btnsua.TabIndex = 0;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
@@ -221,20 +220,20 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Location = new System.Drawing.Point(9, 206);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(12, 254);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(887, 245);
+            this.panel3.Size = new System.Drawing.Size(1183, 302);
             this.panel3.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvphongtro);
-            this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(3, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(883, 240);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1177, 295);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng trọ";
@@ -250,10 +249,10 @@
             this.sltoida,
             this.trangthai});
             this.dgvphongtro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvphongtro.Location = new System.Drawing.Point(2, 15);
-            this.dgvphongtro.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvphongtro.Location = new System.Drawing.Point(3, 17);
+            this.dgvphongtro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvphongtro.Name = "dgvphongtro";
-            this.dgvphongtro.Size = new System.Drawing.Size(879, 223);
+            this.dgvphongtro.Size = new System.Drawing.Size(1171, 276);
             this.dgvphongtro.TabIndex = 0;
             this.dgvphongtro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvphongtro_CellClick);
             // 
@@ -299,16 +298,29 @@
             this.trangthai.HeaderText = "Trạng thái";
             this.trangthai.Name = "trangthai";
             // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(897, 18);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(75, 23);
+            this.btnhuy.TabIndex = 3;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
+            // 
             // Frmphongtro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 460);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(1207, 566);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frmphongtro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phòng trọ";
             this.Load += new System.EventHandler(this.Frmphongtro_Load);
             this.panel1.ResumeLayout(false);
@@ -347,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn sltoida;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
+        private System.Windows.Forms.Button btnhuy;
     }
 }
