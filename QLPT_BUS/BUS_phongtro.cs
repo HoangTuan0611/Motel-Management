@@ -42,6 +42,9 @@ namespace QLPT_BUS
         {
             return sql.LayThongtinloaiphong(DieuKien);
         }
-
+        public string getvalue(string DieuKien)
+        {
+            return sql.getvalue(DieuKien);
+        }
     }
 }

@@ -43,5 +43,9 @@ namespace QLPT_DAL
         {
             return cn.GetDataTable("Select loai from loaiphong " + DieuKien);
         }
+        public string getvalue(string DieuKien)
+        {
+            return cn.GetValue("Select mapt from phongtro where trangthai!='Đang cho thuê' and mapt=" + DieuKien);
+        }
     }
 }

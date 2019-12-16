@@ -185,10 +185,14 @@ namespace QLPT
             try
             {
                 ec.mapt = txtmapt.Text;
-                bus.XoaDuLieu(ec);
-                MessageBox.Show("Xóa thành công");
-                KhoaDieuKien();
-                HienThi("");
+                if (txtmapt.Text == bus.getvalue("'" + txtmapt.Text + "'"))
+                {
+                    bus.XoaDuLieu(ec);
+                    MessageBox.Show("Xóa thành công");
+                    KhoaDieuKien();
+                    HienThi("");
+                }
+                else MessageBox.Show("Không thể xóa phòng đang cho thuê");         
             }
             catch
             {
